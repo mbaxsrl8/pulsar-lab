@@ -12,8 +12,8 @@ public class SampleProducer {
                 .serviceUrl("pulsar://127.0.0.1:56726")
                 .build();
              Producer<String> stringProducer = client.newProducer(Schema.STRING)
-                     .topic("my-topic")
-                     .create();) {
+                     .topic("apache/pulsar/test-topic")
+                     .create()) {
 
             stringProducer.send("My message");
             LOGGER.info("Sent message");
