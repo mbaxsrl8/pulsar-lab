@@ -12,6 +12,9 @@
     <artifactId>aimless-producer</artifactId>
 
     <properties>
+        <pulsar.client.version>4.0.0</pulsar.client.version>
+        <pulsar.admin.version>4.0.0</pulsar.admin.version>
+        <simple..slf4j.version>2.0.16</simple..slf4j.version>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -21,8 +24,20 @@
         <dependency>
             <groupId>org.apache.pulsar</groupId>
             <artifactId>pulsar-client</artifactId>
-            <version>3.3.1</version>
+            <version>${pulsar.client.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.apache.pulsar</groupId>
+            <artifactId>pulsar-client-admin</artifactId>
+            <version>${pulsar.admin.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>${simple..slf4j.version}</version>
+        </dependency>
+
     </dependencies>
 
 </project>
